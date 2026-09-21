@@ -1,12 +1,12 @@
 .wrap {
   background: #ffffff;
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: 14px;
   padding: clamp(2rem, 4vw, 3.5rem);
 }
 
 .page {
-  padding-block: 2.5rem 3.5rem;
+  padding-block: 1.75rem 2.5rem;
 }
 
 .factList {
@@ -138,7 +138,7 @@
 
 .contactCard {
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: 14px;
   padding: 1.5rem;
   background: var(--paper);
 }
@@ -186,7 +186,7 @@
 
 .boardCard {
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: 14px;
   padding: 1.25rem;
   background: #ffffff;
 }

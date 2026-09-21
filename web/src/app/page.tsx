@@ -16,38 +16,76 @@ export default async function Home() {
   return (
     <main>
       <section className={styles.hero}>
+        <div className={`container ${styles.heroInner}`}>
+          <div className={styles.heroText}>
+            <h1 className={styles.heroTitle}>
+              Rigorous science, published fair
+            </h1>
+            <p className={styles.heroLead}>
+              An independent open access publisher advancing peer-reviewed
+              research in medicine and the health sciences under a transparent,
+              double-blind editorial process.
+            </p>
+          </div>
+          <svg
+            className={styles.heroRings}
+            viewBox="0 0 640 400"
+            fill="none"
+            aria-hidden="true"
+            preserveAspectRatio="xMidYMid slice"
+          >
+            <circle cx="515" cy="330" r="115" />
+            <circle cx="380" cy="300" r="210" />
+            <circle cx="180" cy="210" r="320" />
+            <circle cx="-30" cy="60" r="420" />
+          </svg>
+        </div>
+      </section>
+
+      <section className={styles.searchPanel} aria-label="Article search">
         <div className="container">
-          <p className={styles.heroKicker}>Fair Press &middot; Open Access Publishing</p>
-          <h1 className={styles.heroTitle}>
-            Rigorous science, published{" "}
-            <span className="journal-name">fair</span>
-          </h1>
-          <p className={styles.heroLead}>
-            The Fair Press Journal of Science publishes peer-reviewed research
-            across medicine and the health sciences under a transparent,
-            double-blind editorial process. Open access for readers, permanent
-            and citable for authors.
-          </p>
-          <form className={styles.searchForm} action="/search">
+          <form className={styles.searchBar} action="/search" role="search">
+            <span className={styles.searchLabel}>Search for Articles:</span>
             <input
               type="search"
               name="q"
-              className={styles.searchInput}
-              placeholder="Search articles by title, author or keyword"
-              aria-label="Search articles"
+              className={styles.searchField}
+              placeholder="Title / Keyword"
+              aria-label="Title or keyword"
             />
+            <input
+              type="text"
+              name="author"
+              className={styles.searchField}
+              placeholder="Author / Affiliation / Email"
+              aria-label="Author, affiliation or email"
+            />
+            <select
+              name="journal"
+              className={styles.searchSelect}
+              aria-label="Journal"
+            >
+              <option value="">All Journals</option>
+              <option value="fpjs">Fair Press Journal of Science</option>
+            </select>
+            <select name="type" className={styles.searchSelect} aria-label="Article type">
+              <option value="">All Article Types</option>
+              <option value="Research Article">Research Article</option>
+              <option value="Review">Review</option>
+              <option value="Short Communication">Short Communication</option>
+            </select>
             <button type="submit" className="btn">
               Search
             </button>
+            <Link href="/search" className={styles.advancedLink}>
+              Advanced
+            </Link>
           </form>
-          <div className={styles.heroActions}>
-            <Link href="/editorial-process" className="btn">
-              Submit a manuscript
-            </Link>
-            <Link href="/journals" className="btn btn-ghost">
-              Browse journals
-            </Link>
-          </div>
+        </div>
+      </section>
+
+      <section className={styles.statsBand}>
+        <div className="container">
           <div className={styles.statsRow}>
             <div>
               <div className={styles.statNum}>1</div>

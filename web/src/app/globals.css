@@ -1,12 +1,14 @@
 :root {
-  --paper: #f7f3ec;
-  --paper-2: #efe8dc;
-  --ink: #23201c;
-  --ink-soft: #5a544b;
-  --wine: #7a1f2b;
-  --wine-dark: #5e1520;
-  --gold: #b98a2f;
-  --line: #e3dccd;
+  --paper: #fbfaf6;
+  --paper-2: #e9f2ec;
+  --ink: #22303a;
+  --ink-soft: #5b6b75;
+  --wine: #39738a;
+  --wine-dark: #2b5a6e;
+  --gold: #c98e3f;
+  --line: #dfe7e3;
+  --sky: #dceef6;
+  --mint: #e3f3e9;
   --serif: var(--font-serif), Georgia, "Times New Roman", serif;
   --sans: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
 }
@@ -93,7 +95,7 @@ a {
   gap: 0.5rem;
   padding: 0.55rem 1.4rem;
   border: 1px solid var(--wine);
-  border-radius: 4px;
+  border-radius: 999px;
   background: var(--wine);
   color: #ffffff;
   font-family: var(--sans);

@@ -1,69 +1,136 @@
 .hero {
-  background: #ffffff;
-  border-bottom: 1px solid var(--line);
-  padding: 3.5rem 0 3rem;
+  background: var(--wine);
+  position: relative;
+  overflow: hidden;
 }
 
-.heroKicker {
-  font-family: var(--serif);
-  font-variant: small-caps;
-  font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: 0.1em;
-  color: var(--wine);
+.heroInner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 300px;
+  padding-block: 3.25rem;
+}
+
+.heroText {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
 }
 
 .heroTitle {
-  margin-top: 0.75rem;
   font-size: clamp(2rem, 4.5vw, 3rem);
+  letter-spacing: 0.01em;
+  color: #ffffff;
 }
 
 .heroLead {
   margin-top: 1rem;
-  max-width: 62ch;
+  max-width: 58ch;
   font-size: 1.1rem;
-  line-height: 1.65;
-  color: var(--ink-soft);
+  font-weight: 600;
+  line-height: 1.55;
+  color: #d9ecf4;
 }
 
-.searchForm {
-  margin-top: 1.75rem;
-  display: flex;
-  gap: 0.75rem;
-  max-width: 640px;
+.heroRings {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
-.searchInput {
-  flex: 1;
-  min-width: 0;
-  padding: 0.7rem 1rem;
-  border: 1px solid var(--line);
-  border-radius: 4px;
+.heroRings circle {
+  stroke: rgba(255, 255, 255, 0.14);
+  stroke-width: 6;
+  fill: none;
+}
+
+.heroRings circle:first-child {
+  stroke: rgba(255, 255, 255, 0.32);
+  stroke-width: 4;
+  stroke-dasharray: 22 610;
+  stroke-linecap: round;
+}
+
+.searchPanel {
   background: #ffffff;
-  color: var(--ink);
-  font-family: var(--sans);
-  font-size: 1rem;
+  border-bottom: 1px solid var(--line);
 }
 
-.searchInput:focus {
-  border-color: var(--wine);
-}
-
-.heroActions {
-  margin-top: 1.25rem;
+.searchBar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1rem;
+  gap: 0.9rem;
+  padding-block: 1.1rem;
+}
+
+.searchLabel {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+  white-space: nowrap;
+}
+
+.searchField {
+  width: 170px;
+  flex: 0 1 auto;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.9rem;
+}
+
+.searchField::placeholder {
+  color: #a89f93;
+}
+
+.searchField:focus {
+  border-color: var(--wine);
+}
+
+.searchSelect {
+  width: 160px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.searchSelect:focus {
+  border-color: var(--wine);
+}
+
+.advancedLink {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--wine);
+  white-space: nowrap;
+}
+
+.advancedLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.statsBand {
+  padding-top: 2.25rem;
 }
 
 .statsRow {
-  margin-top: 2.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 2.5rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid var(--line);
+  padding-bottom: 0.5rem;
 }
 
 .statNum {
@@ -79,7 +146,7 @@
 }
 
 .section {
-  padding: 3rem 0 0;
+  padding: 2rem 0 0;
 }
 
 .sectionHead {
@@ -87,6 +154,10 @@
   align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
+}
+
+.sectionHead h2 {
+  font-size: 1.5rem;
 }
 
 .viewAll {
@@ -102,10 +173,10 @@
 }
 
 .homeGrid {
-  margin-top: 1.75rem;
+  margin-top: 1.25rem;
   display: grid;
   grid-template-columns: 1.6fr 1fr;
-  gap: 2.5rem;
+  gap: 1.75rem;
   align-items: start;
 }
 
@@ -118,8 +189,8 @@
 .newsCard {
   background: #ffffff;
   border: 1px solid var(--line);
-  border-radius: 4px;
-  padding: 1.25rem 1.5rem;
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
 }
 
 .newsKind {
@@ -184,12 +255,12 @@
 }
 
 .journalSpotlight {
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.5rem;
   display: grid;
   grid-template-columns: 6px 1fr;
   background: #ffffff;
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: 14px;
   overflow: hidden;
 }
 

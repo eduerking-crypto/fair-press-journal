@@ -10,8 +10,15 @@ export const metadata: Metadata = {
 export default async function SearchPage({
   searchParams,
 }: {
-  searchParams: Promise<{ q?: string }>;
+  searchParams: Promise<{ q?: string; author?: string; journal?: string; type?: string }>;
 }) {
-  const { q } = await searchParams;
-  return <SearchClient initialQuery={q ?? ""} />;
+  const { q, author, journal, type } = await searchParams;
+  return (
+    <SearchClient
+      initialQuery={q ?? ""}
+      initialAuthor={author ?? ""}
+      initialJournal={journal ?? ""}
+      initialType={type ?? ""}
+    />
+  );
 }

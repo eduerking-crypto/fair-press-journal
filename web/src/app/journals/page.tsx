@@ -27,10 +27,10 @@ export default async function JournalsPage() {
           <div className={v.journalGrid}>
             {journals.map((j) => (
               <article key={j.id} className={v.journalCard}>
-                <div
-                  className={v.journalBand}
-                  style={{ backgroundColor: j.c }}
-                  aria-hidden="true"
+                <img
+                  src={`/covers/${j.id}.svg`}
+                  alt={`Cover of ${j.name}`}
+                  className={v.journalCover}
                 />
                 <div className={v.journalBody}>
                   <span
