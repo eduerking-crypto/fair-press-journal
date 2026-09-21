@@ -9,6 +9,12 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  images: {
+    // Only first-party SVG covers from /public — no user-supplied URLs.
+    dangerouslyAllowSVG: true,
+    contentDispositionType: "attachment",
+    contentSecurityPolicy: "default-src 'none'; img-src 'self'; sandbox",
+  },
   async headers() {
     return [{ source: "/(.*)", headers: securityHeaders }];
   },

@@ -42,3 +42,7 @@ next-env.d.ts
 
 .vercel
 .env*
+
+# local dev data (auth sessions, users, submissions)
+.data/
+

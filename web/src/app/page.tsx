@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { NEWS } from "@/data/news";
 import { TOPICS } from "@/data/topics";
@@ -198,14 +199,16 @@ export default async function Home() {
                 <Link href={`/journal/${journal?.id ?? "fpjs"}`} className="btn">
                   View journal
                 </Link>
-                <Link href="/editorial-process" className="btn btn-ghost">
+                <Link href="/submit" className="btn btn-ghost">
                   Submit
                 </Link>
               </div>
             </div>
-            <img
+            <Image
               src={`/covers/${journal?.id ?? "fpjs"}.svg`}
               alt={`Cover of ${journal?.name ?? "Fair Press Journal of Science"}`}
+              width={300}
+              height={400}
               className={styles.journalSpotCover}
             />
           </div>

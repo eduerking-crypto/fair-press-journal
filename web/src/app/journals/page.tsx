@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { getJournals } from "@/lib/data";
 import c from "../content.module.css";
@@ -27,9 +28,11 @@ export default async function JournalsPage() {
           <div className={v.journalGrid}>
             {journals.map((j) => (
               <article key={j.id} className={v.journalCard}>
-                <img
+                <Image
                   src={`/covers/${j.id}.svg`}
                   alt={`Cover of ${j.name}`}
+                  width={600}
+                  height={800}
                   className={v.journalCover}
                 />
                 <div className={v.journalBody}>

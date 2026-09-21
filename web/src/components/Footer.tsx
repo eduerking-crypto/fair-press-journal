@@ -4,7 +4,7 @@ import Logo from "./Logo";
 const AUTHOR_LINKS = [
   { href: "/editorial-process", label: "Guidelines" },
   { href: "/ethics", label: "Ethics" },
-  { href: "/editorial-process", label: "Submit" },
+  { href: "/submit", label: "Submit" },
 ];
 
 const BROWSE_LINKS = [
