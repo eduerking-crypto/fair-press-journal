@@ -203,6 +203,11 @@ export default async function Home() {
                 </Link>
               </div>
             </div>
+            <img
+              src={`/covers/${journal?.id ?? "fpjs"}.svg`}
+              alt={`Cover of ${journal?.name ?? "Fair Press Journal of Science"}`}
+              className={styles.journalSpotCover}
+            />
           </div>
         </div>
       </section>
