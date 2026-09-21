@@ -1,0 +1,246 @@
+.hero {
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+  padding: 3.5rem 0 3rem;
+}
+
+.heroKicker {
+  font-family: var(--serif);
+  font-variant: small-caps;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.1em;
+  color: var(--wine);
+}
+
+.heroTitle {
+  margin-top: 0.75rem;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+}
+
+.heroLead {
+  margin-top: 1rem;
+  max-width: 62ch;
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.searchForm {
+  margin-top: 1.75rem;
+  display: flex;
+  gap: 0.75rem;
+  max-width: 640px;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 0;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1rem;
+}
+
+.searchInput:focus {
+  border-color: var(--wine);
+}
+
+.heroActions {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.statsRow {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
+}
+
+.statNum {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--wine);
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.section {
+  padding: 3rem 0 0;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.viewAll {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--wine);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.viewAll:hover {
+  color: var(--wine-dark);
+}
+
+.homeGrid {
+  margin-top: 1.75rem;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.newsCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.newsCard {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+}
+
+.newsKind {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--wine);
+}
+
+.newsTitle {
+  margin-top: 0.4rem;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.newsDate {
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.newsExcerpt {
+  margin-top: 0.4rem;
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.topicsStrip {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.topicChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  color: var(--ink);
+  transition: border-color 160ms ease, color 160ms ease;
+}
+
+.topicChip:hover {
+  border-color: var(--wine);
+  color: var(--wine);
+}
+
+.topicDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.journalSpotlight {
+  margin-bottom: 3.5rem;
+  display: grid;
+  grid-template-columns: 6px 1fr;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.journalSpotBand {
+  background: var(--wine);
+}
+
+.journalSpotBody {
+  padding: 2rem 2.25rem;
+}
+
+.journalSpotKicker {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--wine);
+}
+
+.journalSpotName {
+  margin-top: 0.5rem;
+  font-family: var(--serif);
+  font-variant: small-caps;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.25;
+}
+
+.journalSpotAims {
+  margin-top: 0.9rem;
+  max-width: 75ch;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.journalSpotIssn {
+  margin-top: 0.9rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.journalSpotActions {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .homeGrid {
+    grid-template-columns: 1fr;
+  }
+}
